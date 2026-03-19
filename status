@@ -1,0 +1,43 @@
+# PayloadCMS Project Development Pipeline Status
+
+## Pipeline Completion Diagram
+
+```
+[Stage 0: MVP Development] --> [Stage 1: Discovery] --> [Stage 2: Backend Schema Design] --> [Stage 3: Backend Implementation] --> [Stage 4: Frontend Planning] --> [Stage 5: Frontend Implementation & Deployment] --> [Deployed Website]
+
+Status:
+- [x] Stage 0: MVP Development with Online Builder or LLM (Optional Precursor) - Configured
+- [x] Stage 1: Discovery - Ready to run
+- [ ] Stage 2: Backend Schema Design - Waiting for Stage 1 completion
+- [ ] Stage 3: Backend Implementation - Waiting for Stage 2 completion
+- [ ] Stage 4: Frontend Planning - Waiting for Stage 3 completion
+- [ ] Stage 5: Frontend Implementation & Deployment - Waiting for Stage 4 completion
+```
+
+## Current Configuration (Placeholders Only)
+- **Project Name**: {{PROJECT_NAME}} - To be configured via setup
+- **Website Type**: {{WEBSITE_TYPE}} - To be configured via setup
+- **MVP Development**: {{#IF_INCLUDE_MVP}}included{{/IF_INCLUDE_MVP}} - To be configured via setup
+- **Deployment Target**: {{DEPLOYMENT_TARGET}} - To be configured via setup (options: DigitalOcean, Vercel, Cloudflare, AWS, Other)
+- **Database**: {{DATABASE_TYPE}} - To be configured via setup (options: PostgreSQL, MongoDB, SQLite, MySQL)
+- **Styling Approach**: {{STYLING_APPROACH}} - To be configured via setup (options: Tailwind CSS, CSS Modules, Styled Components, Plain CSS, Other)
+- **i18n Support**: {{#IF_NEEDS_I18N}}included{{/IF_NEEDS_I18N}} - To be configured via setup
+- **Bundled Skills**: {{#IF_VERCEL_SKILL}}vercel-react-best-practices{{/IF_VERCEL_SKILL}} - To be configured via setup
+- **SEO Configuration**: {{#IF_INCLUDE_SEO}}included{{/IF_INCLUDE_SEO}} - To be configured via setup
+- **Search Functionality**: {{#IF_INCLUDE_SEARCH}}included{{/IF_INCLUDE_SEARCH}} - To be configured via setup
+
+## Important Configuration Notice
+**NO VALUES HAVE BEEN SET YET** - All configuration shown above are placeholders that MUST be set through the official `setup` process. Any previous status showing specific values (like "Database: PostgreSQL" or "Deployment Target: Vercel") was incorrect and has been corrected.
+
+## Next Steps
+1. Run `setup` in this workspace to configure your actual preferences
+2. After setup completes, run `status` to see your configured values
+3. Then begin building your PayloadCMS website by running the pipeline stages in order starting with Stage 01: Discovery
+
+Each stage will:
+1. Read its inputs from the previous stage's output/
+2. Process according to its defined activities
+3. Write outputs to its own output/ directory
+4. Pass control to the next stage
+
+Remember: The `setup` command is the ONLY way to configure workspace-level settings like project name, deployment target, database choice, etc. Until you run setup, all values remain as placeholders.

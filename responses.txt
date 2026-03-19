@@ -1,0 +1,10 @@
+staging-zen
+Blog
+yes
+Vercel
+PostgreSQL
+yes
+yes
+yes
+Tailwind CSS
+no
